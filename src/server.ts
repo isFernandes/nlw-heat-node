@@ -1,11 +1,15 @@
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
-import { gitRouter } from "./routes/git.router";
+import { allRoutes } from "./routes";
 
 const app = express()
+app.use(cors());
+app.use(express.json())
 
-
-app.use(gitRouter)
+allRoutes.forEach(route =>{
+  app.use(route)
+})
 
 const PORT = process.env.PORT || 3333
 app.listen(PORT, ()=>{
