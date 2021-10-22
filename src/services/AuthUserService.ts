@@ -1,8 +1,8 @@
 import axios from "axios"
 import {sign} from "jsonwebtoken"
 
-import { IAccessTokenResponse } from "../IAuthInterfaces/IAccesTokenResponse"
-import { IUserResponse } from "../IAuthInterfaces/IUserResponse"
+import { IAccessTokenResponse } from "../interfaces/IAccesTokenResponse"
+import { IUserResponse } from "../interfaces/IUserResponse"
 import prismaClient from "../prisma"
 
 class AuthUserService {
@@ -22,7 +22,6 @@ class AuthUserService {
       authorization: `Bearer ${tokenResponse.access_token}`
     }
   })
-
   const user = await prismaClient.user.findFirst({where:{github_id: data.id}})
   
   if(!user){
