@@ -19,7 +19,7 @@ Nesta aplicacao esta sendo utilizada as tecnologias:
 
 ### Primeiro os problemas
 
-- Tive alguns problemas com o prismaClient, foi necessário remover tudo que era ligado ao prisma e recomeçar, não foi um processo demorado mas foi chato e tal problema não foi localizado na internet em momento algum, o erro era o seguinte : ``A propriedade '{nome da minha model}' não existe no tipo 'PrismaClient<PrismaClientOptions, never, RejectOnNotFound | RejectPerOperation>'`.
+- Tive alguns problemas com o prismaClient, foi necessário remover tudo que era ligado ao prisma e recomeçar, não foi um processo demorado mas foi chato e tal problema não foi localizado na internet em momento algum, o erro era o seguinte : `A propriedade '{nome da minha model}' não existe no tipo 'PrismaClient<PrismaClientOptions, never, RejectOnNotFound | RejectPerOperation>'`.
 - Tive problemas também com a estrutura que queria aplicar, tentei aplicar o clean archteture, mas ele ocorreu junto ao problema que citei acima sobre o prisma então me desfiz toda minha estrutura e apliquei como na aula, com modificações mais simples na forma de codificar.
 - A aula não explicou muito sobre socket.io mas creio que isso vai depender da próxima aula que é o front-end
 
